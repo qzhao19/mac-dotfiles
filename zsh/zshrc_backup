@@ -1,0 +1,16 @@
+# fnm initialize
+export PATH="$HOME/.local/share/fnm:$PATH"
+eval "$(fnm env --use-on-cd)"
+
+# bun initialize
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# starship initialize
+export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
+eval "$(starship init zsh)"
+
+alias ls='lsd'
+
+# bun completions
+[ -s "/Users/qzhao19/.bun/_bun" ] && source "/Users/qzhao19/.bun/_bun"
